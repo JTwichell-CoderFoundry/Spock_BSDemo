@@ -1,0 +1,80 @@
+﻿
+@{
+    ViewBag.Title = "Factorial Demo";
+}
+
+<h2>Factorial Demo</h2>
+
+<div class="row">
+    <div class="col-md-12 text-center h2">
+        Welcome to the Factorial problem!!
+    </div>
+</div>
+
+<div class="row">
+
+    <div class="col-md-6">
+        <div class="row">
+            <form>
+                <input id="fact" type="text" data-rules-min="0" data-rules-max="170" data-rules-digits="true" placeholder="Enter your number" />
+            </form>
+            @*<input id="fact" type="number" placeholder="Enter your number" />*@
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <button id="btnFact" class="btn btn-danger">Calculate</button>
+            </div>
+            <div class="col-md-3">
+                <button id="btnClear" class="btn btn-success">Clear</button>
+            </div>            
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="row">
+            <div class="col-md-12 text-center h4">
+                <u>Results...</u>
+            </div>
+        </div>
+        <div class="row">
+            <p id="factOut"></p>
+        </div>
+    </div>
+</div>
+
+
+@section scripts{
+    
+    <script>
+        //I need a click event handler for the button
+        $("#btnFact").click(function () {
+            //Step 1: Get the user data
+            var number = +$("#fact").val();
+
+            //I am using an If statement to evaluate something
+            if ($(".validarium-error > li").length == 0) {
+                //Step 2: Calculate the Factorial
+                for (var loop = number -1; loop > 1; loop--) {             
+                    number *= loop;
+                }
+                //Step 3: Show the result
+                $("#factOut").text(number);
+            }
+
+        });
+
+        $("#btnClear").click(function () {
+            //Clear the input
+            $("#fact").val('');
+
+            //Clear the output
+            $("#factOut").text('');
+        });
+
+    </script>    
+    
+}
+
+
+
+

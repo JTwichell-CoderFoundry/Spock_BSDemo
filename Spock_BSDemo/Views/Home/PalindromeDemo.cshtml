@@ -1,0 +1,65 @@
+﻿
+@{
+    ViewBag.Title = "Palindrome Demo";
+}
+
+<h2>Palindrome Demo</h2>
+
+<!-- Use the BS Grid to layout my UI -->
+<!-- Use a decrementing for loop to iterate over the supplied word from right to left -->
+<!-- In conjunction with the substr command that uses the current loop value -->
+
+<div class="row">
+    <div class="col-md-12 text-center h2">
+        Welcome to the Palindrome problem!!
+    </div>
+</div>
+
+<div class="row">
+
+    <div class="col-md-6">
+        <div class="row">
+            <div class="col-md-6">
+                <input class="palInput" id="palIn" type="text" placeholder="Enter your word" />
+            </div>
+          
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <button id="btnPal" class="btn btn-success standardW">Using A For Loop</button>
+            </div>
+            <div class="col-md-4">
+                <button id="btnPal2" class="btn btn-danger standardW">Array</button>
+            </div>
+            <div class="col-md-4">
+                <button id="btnPal3" class="btn btn-warning standardW">One Liner</button>
+            </div>
+            <div class="col-md-4">
+                <button id="btnClear" class="btn btn-primary standardW">Clear</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="row">
+            <div class="col-md-12 text-center h4">
+                <u>Results...</u>
+            </div>
+        </div>
+        <div class="row">
+            <p id="palOut"></p>
+        </div>
+        <div class="row">
+            <p id="badOut"></p>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script src="~/Scripts/Palindrome.js"></script>
+}
+
+
+
+
+

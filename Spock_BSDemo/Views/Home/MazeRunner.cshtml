@@ -1,0 +1,106 @@
+﻿
+@{
+    ViewBag.Title = "Path Finder";
+}
+
+<style>
+    .common {
+        height: 200px;
+        width: 200px;
+    }
+
+    .wall {
+        background-color: darkgrey;
+    }
+
+    .hallway {
+        background-color: blanchedalmond;
+    }
+
+    [celltype='true']{
+        border:2px solid black;
+        height: 195px;
+        background-color: blanchedalmond;
+    }
+
+    [celltype='false']{
+        border:2px solid black;
+        height: 195px;
+        background-color: darkgrey;
+    }
+</style>
+
+<h2>Path Finder</h2>
+
+<div class="row">
+    <div class="col-md-12 text-center h3">
+        This is the Maze Runner project. Can you find your way...
+    </div>
+</div>
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        <section id="maze"></section>
+    </div>
+</div>
+
+
+
+@section scripts{
+
+    <script>
+
+        var maze = BuildMaze();
+        PrintMaze(maze);
+
+        function BuildMaze() {
+            var maze = new Array();
+            maze.push([true, true, false, false, false, false]);
+            maze.push([false, true, false, false, false, false]);
+            maze.push([false, true, true, true, false, false]);
+            maze.push([false, false, false, true, false, false]);
+            maze.push([false, false, true, true, false, false]);
+            maze.push([false, false, true, false, false, false]);
+            return maze;
+        }
+
+        function PrintMaze(maze) {
+            var mazeString = "";
+            for (var outerIndex = 0; outerIndex < maze.length; outerIndex++) {
+                mazeString += "<div class='row'>";
+                for (var innerIndex = 0; innerIndex < maze[outerIndex].length; innerIndex++) {
+                    mazeString += BuildCell(maze[outerIndex][innerIndex]);
+                }
+                mazeString += "</div>";
+            }
+            $("#maze").html(mazeString);
+        }
+
+        function BuildCell(value) {
+            return `<div class='col-md-2 cell' celltype='${value}'></div>`;
+        }
+
+        $(".cell").click(function () {
+            var cellType = $(this).attr("celltype");
+            if (cellType == 'true')
+                alert("Good Job you are progressing through the maze");
+            else
+                alert("You have hit a wall...");
+        });
+
+    </script>
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,24 @@
+﻿.counter {
+    font-weight: bolder;
+    font-size: larger;
+    color: purple;
+}
+
+.fizz {
+    color: red;
+    font-weight: bolder;
+    font-size: larger;
+}
+
+.buzz {
+    color: blue;
+    font-weight: bolder;
+    font-size: larger;
+}
+
+.fizzbuzz {
+    color: green;
+    font-weight: bolder;
+    font-size: larger;
+    font-family: Algerian;
+}

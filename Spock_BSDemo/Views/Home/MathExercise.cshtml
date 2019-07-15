@@ -1,0 +1,324 @@
+﻿
+@{
+    ViewBag.Title = "Math Exercise";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div class="row">
+    <div class="col-md-3">
+        <button class="btn btn-success" data-toggle="modal" data-target="#mathModal2">Pop Modal 2</button>
+    </div>
+    <div class="col-md-3">
+        <button class="btn btn-success" data-toggle="modal" data-target="#myModal">Pop Modal</button>
+    </div>
+</div>
+
+<!-- Modal -->
+<div id="mathModal2" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Modal Header</h4>
+            </div>
+            <div class="modal-body">
+
+                <ul class="nav nav-pills">
+                    <li class="active"><a data-toggle="pill" href="#math">Math</a></li>
+                    <li><a data-toggle="pill" href="#factorial">Factorial</a></li>
+                    <li><a data-toggle="pill" href="#palidrome">Palidrome</a></li>
+                    <li><a data-toggle="pill" href="#fizzbuzz">FizzBuzz</a></li>
+                </ul>
+
+                <div class="tab-content">
+                    <div id="math" class="tab-pane fade in active">
+                        <div class="row">
+                            <div class="col-md-12 text-center h3">
+                                This is where you tell the user what is going on...
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <div class="col-md-6">Enter number 1:</div>
+                                    <div class="col-md-6">
+                                        <input type="number" id="mathnum1" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">Enter number 2:</div>
+                                    <div class="col-md-6">
+                                        <input type="number" id="mathnum2" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">Enter number 3:</div>
+                                    <div class="col-md-6">
+                                        <input type="number" id="mathnum3" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">Enter number 4:</div>
+                                    <div class="col-md-6">
+                                        <input type="number" id="mathnum4" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">Enter number 5:</div>
+                                    <div class="col-md-6">
+                                        <input type="number" id="mathnum5" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <button id="mathBtn" class="btn btn-primary">Calculate</button>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <button id="clearBtn" class="btn btn-success">Clear</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <div class="col-md-12 text-center h4">
+                                        Your calculated results
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <p class="output" id="smallest"></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <p class="output" id="largest"></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <p class="output" id="sum"></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <p class="output" id="product"></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <p class="output" id="average"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+                    </div>
+                    <div id="factorial" class="tab-pane fade">
+                        <h3>Menu 1</h3>
+                        <p>Some content in menu 1.</p>
+                    </div>
+                    <div id="palidrome" class="tab-pane fade">
+                        <h3>Palindrome</h3>
+                        <p>Palindrome stuff</p>
+                    </div>
+                    <div id="fizzbuzz" class="tab-pane fade">
+                        <h3>Fizz Buzz</h3>
+                        <p>Fizz Buzz stuff</p>
+                    </div>
+
+
+                </div>
+
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Tab through my exercises</h4>
+            </div>
+         
+            <div class="modal-body">
+                <!-- Insert a BS component here... -->
+                <ul class="nav nav-pills">
+                    <li class="active"><a data-toggle="pill" href="#home">Home</a></li>
+                    <li><a data-toggle="pill" href="#menu1">Menu 1</a></li>
+                    <li><a data-toggle="pill" href="#menu2">Menu 2</a></li>
+                    <li><a data-toggle="pill" href="#fizzbuzz2">Fizz Buzz</a></li>
+                </ul>
+
+                <div class="tab-content">
+                    <div id="home" class="tab-pane fade in active">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <div class="col-md-6">Enter number 1:</div>
+                                    <div class="col-md-6">
+                                        <input type="number" id="mathnum1" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">Enter number 2:</div>
+                                    <div class="col-md-6">
+                                        <input type="number" id="mathnum2" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">Enter number 3:</div>
+                                    <div class="col-md-6">
+                                        <input type="number" id="mathnum3" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">Enter number 4:</div>
+                                    <div class="col-md-6">
+                                        <input type="number" id="mathnum4" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">Enter number 5:</div>
+                                    <div class="col-md-6">
+                                        <input type="number" id="mathnum5" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <button id="mathBtn" class="btn btn-primary">Calculate</button>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <button id="clearBtn" class="btn btn-success">Clear</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <div class="col-md-12 text-center h4">
+                                        Your calculated results
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <p class="output" id="smallest"></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <p class="output" id="largest"></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <p class="output" id="sum"></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <p class="output" id="product"></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <p class="output" id="average"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                    <div id="menu1" class="tab-pane fade">
+                        <h3>Menu 1</h3>
+                        <p>Some content in menu 1.</p>
+                    </div>
+                    <div id="menu2" class="tab-pane fade">
+                        <h3>Menu 2</h3>
+                        <p>Some content in menu 2.</p>
+                    </div>
+                    <div id="fizzbuzz2" class="tab-pane fade">
+                        <h3>Fizz Buzz</h3>
+                        <p>Some content in menu 2.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+@section scripts{
+
+    <script>
+        $("#mathBtn").click(function () {
+            //Step 1: Get the user data
+            var num1 = Number($("#mathnum1").val());
+            var num2 = Number($("#mathnum2").val());
+            var num3 = Number($("#mathnum3").val());
+            var num4 = Number($("#mathnum4").val());
+            var num5 = Number($("#mathnum5").val());
+
+            //Step 2: Make the calculations with the given data
+            var smallest = Math.min(num1, num2, num3, num4, num5);
+            var largest = Math.max(num1, num2, num3, num4, num5);
+            var sum = num1 + num2 + num3 + num4 + num5;
+            var product = num1 * num2 * num3 * num4 * num5;
+            var average = sum / 5;
+
+            //Step 3: Display the results
+            $("#smallest").text("The smallest number is: " + smallest);
+            $("#largest").text("The largest number is: " + largest);
+            $("#sum").text("The sum is: " + sum);
+            $("#product").text("The product is: " + product);
+            $("#average").text("The average is: " + average);
+        });
+        $("#clearBtn").click(function () {
+            //$("#mathnum1").val('');
+            //$("#mathnum2").val('');
+            //$("#mathnum3").val('');
+            //$("#mathnum4").val('');
+            //$("#mathnum5").val('');
+            $("#mathnum1, #mathnum2, #mathnum3, #mathnum4, #mathnum5").val('');
+
+            //$("#smallest").text('');
+            //$("#largest").text('');
+            //$("#sum").text('');
+            //$("#average").text('');
+            //$("#product").text('');
+            $(".output").text("");
+
+
+        });
+    </script>
+
+
+}
+
+
+

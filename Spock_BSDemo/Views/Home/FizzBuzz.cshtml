@@ -1,0 +1,77 @@
+﻿
+@{
+    ViewBag.Title = "FizzBuzz";
+}
+
+<h2>Fizz Buzz</h2>
+
+<div class="row">
+    <div class="col-md-12 text-center h3">
+        Here is my Fizz Buzz coding challenge
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="row">
+            <input id="fbIn1" type="number" placeholder="Enter number 1"/>
+        </div>
+        <div class="row">
+            <input id="fbIn2" type="number" placeholder="Enter number 2" />
+        </div>
+        <div class="row">
+            <button id="btnFB" class="btn btn-primary">Go</button>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="row text-center">
+            Output
+        </div>
+        <div class="row">
+            <p id="fbOut"></p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+@section scripts{
+
+    <script>
+        $("#btnFB").click(function () {
+            var num1 = +$("#fbIn1").val();
+            var num2 = +$("#fbIn2").val();
+
+            var fizzbuzzEntry = "<span class='fizzbuzz'>Fizz-Buzz</span>";
+            var fizzEntry = "<span class='fizz'>Fizz</span>";
+            var buzzEntry = "<span class='buzz'>Buzz</span>";
+
+            for (var counter = 1, array = [], fizz = 0, buzz = 0, counterEntry = ""; counter <= 100; counter++) {
+                fizz = counter % num1;
+                buzz = counter % num2;
+            
+                if (!fizz && !buzz)
+                    array.push(fizzbuzzEntry);
+                else if (!fizz)
+                    array.push(fizzEntry);
+                else if (!buzz)
+                    array.push(buzzEntry);
+                else {
+                       counterEntry = "<span class='counter'>" + counter + "</span>";
+                       array.push(counterEntry);                    
+                }
+            }
+      
+            $("#fbOut").html(array.join(', '));
+        });
+    </script>    
+    
+    
+}
+
+
+
+
